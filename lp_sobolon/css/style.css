@@ -1,0 +1,515 @@
+@charset "UTF-8";
+/* =============================================================================
+media
+========================================================================== */
+/* =============================================================================
+responsive
+========================================================================== */
+@media screen and (min-width: 769px) {
+  .pc-only {
+    display: block;
+  }
+  .sp-only {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pc-only {
+    display: none;
+  }
+  .sp-only {
+    display: block;
+  }
+}
+
+/* =============================================================================
+common style
+========================================================================== */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "ヒラギノ明朝 ProN";
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+img {
+  width: 100%;
+}
+
+section {
+  padding-top: 16rem;
+}
+
+.inner {
+  max-width: 120rem;
+  width: 90%;
+  padding-top: 8rem;
+  display: block;
+  margin: 0 auto;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.section-ttl {
+  font-size: 4rem;
+  text-align: center;
+}
+
+.section-ttl:after {
+  position: absolute;
+  content: "";
+  width: 6rem;
+  height: 0.1rem;
+  background: #3EA1D1;
+  bottom: -1rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.btn {
+  text-align: center;
+  margin-top: 6.4rem;
+}
+
+.btn-more {
+  font-size: 1.4rem;
+  padding: 1.6rem 5.4rem;
+  color: #3EA1D1;
+  border: 1px solid;
+  background: #fff;
+}
+
+.btn-more:hover {
+  background: #3EA1D1;
+  color: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 1;
+}
+
+.color {
+  color: #E7728E;
+}
+
+.fs {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+/* =============================================================================
+header
+========================================================================== */
+@media screen and (min-width: 769px) {
+  .header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background: #fff;
+  }
+  .header-inner {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 2.5rem 4rem;
+  }
+  .header-logo {
+    width: 12rem;
+  }
+  .header-nav {
+    color: #333333;
+  }
+  .header-nav-item:not(:first-child) {
+    margin-left: 4.8rem;
+  }
+}
+
+/* =============================================================================
+fv
+========================================================================== */
+.fv {
+  padding-top: 0;
+}
+
+.fv-img {
+  width: 99rem;
+  margin-left: 21rem;
+}
+
+.fv-txt {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: #fff;
+  padding: 9.2rem 4rem 9.2rem 0;
+}
+
+.fv-txt h2 {
+  font-size: 2.6rem;
+}
+
+.fv-txt p {
+  margin-top: 2.8rem;
+}
+
+/* =============================================================================
+concept
+========================================================================== */
+.concept-wrapper {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.concept-img {
+  width: 60rem;
+}
+
+.concept-txt {
+  width: 52rem;
+}
+
+.concept-txt-01 {
+  font-size: 2rem;
+}
+
+.concept-txt-02 {
+  margin-top: 4.8rem;
+}
+
+/* =============================================================================
+feature
+========================================================================== */
+.feature-list {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.feature-item {
+  -webkit-box-shadow: 3px 3px 15px #60606029;
+          box-shadow: 3px 3px 15px #60606029;
+  width: calc(33.3% - 90px * 2 / 3);
+}
+
+.feature-item:not(:nth-child(3n+1)) {
+  margin-left: 9rem;
+}
+
+.feature-item:nth-child(n+4) {
+  margin-top: 5rem;
+}
+
+.feature-item p {
+  text-align: center;
+  padding: 3.2rem 0;
+}
+
+/* =============================================================================
+about
+========================================================================== */
+.about {
+  padding-top: 8rem;
+}
+
+.about-bg {
+  background: url(../img/bg.png);
+  background-size: cover;
+}
+
+.about-inner {
+  padding: 125px 0;
+}
+
+.about-txt {
+  color: #fff;
+}
+
+.about-txt-01 {
+  font-size: 22px;
+}
+
+.about-txt-02 {
+  margin-top: 4rem;
+}
+
+/* =============================================================================
+product
+========================================================================== */
+.product-inner {
+  max-width: 94rem;
+}
+
+.product-list {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.product-item {
+  font-size: 1.4rem;
+  width: calc(33.3% - 80px * 2 / 3);
+}
+
+.product-item:not(:nth-child(3n+1)) {
+  margin-left: 8rem;
+}
+
+.product-item:nth-child(n+4) {
+  margin-top: 3rem;
+}
+
+.product-item p {
+  margin-top: 2.4rem;
+}
+
+.product-item span {
+  display: block;
+  margin-top: 1.6rem;
+  color: #989898;
+}
+
+/* =============================================================================
+news
+========================================================================== */
+.news-inner {
+  max-width: 104rem;
+}
+
+.news-item {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 0 2.4rem;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.news-item:not(:first-child) {
+  margin: 2.2rem 0 0;
+}
+
+.news-item-img {
+  width: 26rem;
+}
+
+.news-item-txt {
+  width: 76rem;
+}
+
+.news-item-date {
+  font-size: 1.4rem;
+  color: #333333;
+  margin-top: 2.5rem;
+}
+
+.news-item-ttl {
+  font-size: 1.8rem;
+  margin-top: 1.6rem;
+}
+
+.news-item-detail {
+  font-size: 1.4rem;
+  color: #888888;
+  margin-top: 2.4rem;
+}
+
+/* =============================================================================
+keyword
+========================================================================== */
+.keyword-wrapper {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.keyword-txt {
+  width: 52rem;
+}
+
+.keyword-txt01 {
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+
+.keyword-txt02 {
+  margin-top: 4.8rem;
+}
+
+.keyword-img {
+  width: 60rem;
+}
+
+/* =============================================================================
+contact
+========================================================================== */
+.contact-bg {
+  background: url(../img/contact.png);
+  background-size: cover;
+  padding: 7.2rem 0 8.5rem;
+}
+
+.contact-inner {
+  max-width: 52rem;
+}
+
+.contact-txt {
+  text-align: center;
+}
+
+.contact-policy {
+  text-align: center;
+}
+
+.contact form {
+  margin-top: 2.4rem;
+}
+
+.contact form dl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact form dl:not(:first-child) {
+  margin-top: 3.2rem;
+}
+
+.contact form dt {
+  width: 18rem;
+  text-align: center;
+  background: #3EA1D1B3;
+  color: #fff;
+  padding: 1rem 2rem;
+}
+
+.contact form dd {
+  margin-left: 2rem;
+  width: 32rem;
+}
+
+.contact form input {
+  border: none;
+  border-radius: 2px;
+}
+
+.contact form input[type="text"] {
+  width: 100%;
+  height: 4rem;
+  -webkit-box-shadow: 5px 6px 15px #60606029;
+          box-shadow: 5px 6px 15px #60606029;
+  padding-left: 10px;
+}
+
+.contact form input[type="email"] {
+  width: 100%;
+  height: 4rem;
+  -webkit-box-shadow: 5px 6px 15px #60606029;
+          box-shadow: 5px 6px 15px #60606029;
+  padding-left: 10px;
+}
+
+.contact form input[type="radio"] {
+  margin-right: 1rem;
+}
+
+.contact form textarea {
+  width: 100%;
+  height: 12.2rem;
+  border: none;
+  resize: vertical;
+  -webkit-box-shadow: 5px 6px 15px #60606029;
+          box-shadow: 5px 6px 15px #60606029;
+  padding-left: 5px;
+}
+
+.contact form input[type="checkbox"] {
+  margin-right: 1rem;
+}
+
+.contact form .privacy {
+  text-align: center;
+  margin-top: 3.2rem;
+}
+
+.contact form .privacy a {
+  text-decoration: underline;
+}
+
+/* =============================================================================
+footer
+========================================================================== */
+.footer-bg {
+  background: #F7F7F7;
+}
+
+.footer-inner {
+  padding-bottom: 1.7rem;
+}
+
+.footer-logo {
+  width: 12rem;
+  margin: 0 auto;
+}
+
+.footer-list {
+  margin: 2.4rem 0 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.2rem;
+}
+
+.footer-list-nav:not(:first-child) {
+  margin-left: 3.2rem;
+}
+
+.footer-sns {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 3.7rem;
+}
+
+.footer-sns-item:not(:first-child) {
+  margin-left: 4rem;
+}
+
+.footer-sns-item a {
+  font-size: 2.2rem;
+  color: #3EA1D1B3;
+}
+
+.footer-right {
+  margin-top: 2.4rem;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #888888;
+}

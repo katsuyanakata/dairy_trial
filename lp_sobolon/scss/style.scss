@@ -1,0 +1,470 @@
+
+/* =============================================================================
+media
+========================================================================== */
+$media-pc : 769px;
+$media-sp : 768px;
+@mixin pc {
+    @media screen and (min-width : $media-pc){
+        @content;
+    }
+}
+@mixin sp {
+    @media screen and (max-width : $media-sp){
+        @content;
+    }
+}
+
+/* =============================================================================
+responsive
+========================================================================== */
+@include pc{
+    .pc-only{
+        display: block;
+    }
+    .sp-only{
+        display: none;
+    }
+}
+@include sp{
+    .pc-only{
+        display: none;
+    }
+    .sp-only{
+        display: block;
+    }
+}
+
+
+/* =============================================================================
+common style
+========================================================================== */
+html {
+    font-size: 62.5%;
+}
+// 1rem = 10px
+
+body{
+    font-family: "ヒラギノ明朝 ProN";
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+a{
+    text-decoration: none;
+    color: #000;
+    &:hover{
+        opacity: 0.8;
+    }
+}
+img{
+    width: 100%;
+}
+section{
+    padding-top: 16rem;
+}
+.inner{
+    max-width: 120rem;
+    width: 90%;
+    padding-top: 8rem;
+    display: block;
+    margin: 0 auto;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+.section-ttl{
+    font-size: 4rem;
+    text-align: center;
+    &:after{
+        position: absolute;
+        content: "";
+        width: 6rem;
+        height: 0.1rem;
+        background: #3EA1D1;
+        bottom: -1rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+.btn{
+    text-align: center;
+    margin-top: 6.4rem;
+    &-more{
+        font-size: 1.4rem;
+        padding: 1.6rem 5.4rem;
+        color: #3EA1D1;
+        border: 1px solid;
+        background: #fff;
+        &:hover{
+            background: #3EA1D1;
+            color: #fff;
+            transition: 0.3s;
+            opacity: 1;
+        }
+    }
+}
+
+.color{
+    color: #E7728E;
+}
+.fs{
+    align-items: flex-start;
+}
+
+
+/* =============================================================================
+header
+========================================================================== */
+
+@include pc {
+    .header{
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        background: #fff;
+        &-inner{
+            justify-content: space-between;
+            padding: 2.5rem 4rem;
+        }
+        &-logo{
+            width: 12rem;
+        }
+        &-nav{
+            color: #333333;
+            &-item{
+                &:not(:first-child){
+                    margin-left: 4.8rem;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+/* =============================================================================
+fv
+========================================================================== */
+.fv{
+    padding-top: 0;
+    &-img{
+        width: 99rem;
+        margin-left: 21rem;
+    }
+    &-txt{
+        top: 50%;
+        transform: translateY(-50%);
+        background: #fff;
+        padding: 9.2rem 4rem 9.2rem 0;
+        h2{
+            font-size: 2.6rem;
+        }
+        p{
+            margin-top: 2.8rem;
+        }
+    }
+}
+
+/* =============================================================================
+concept
+========================================================================== */
+.concept{
+    &-wrapper{
+        justify-content: space-between;
+    }
+    &-img{
+        width: 60rem;
+    }
+    &-txt{
+        width: 52rem;
+        &-01{
+            font-size: 2rem;
+        }
+        &-02{
+            margin-top: 4.8rem;
+        }
+    }
+}
+
+/* =============================================================================
+feature
+========================================================================== */
+
+.feature{
+    &-list{
+        flex-wrap: wrap;
+    }
+    &-item{
+        box-shadow: 3px 3px 15px #60606029;
+        width: calc(33.3% - 90px * 2 / 3);
+        &:not(:nth-child(3n+1)){
+            margin-left: 9rem;
+        }
+        &:nth-child(n+4){
+            margin-top: 5rem;
+        }
+        p{
+            text-align: center;
+            padding: 3.2rem 0;
+        }
+    }
+}
+
+/* =============================================================================
+about
+========================================================================== */
+.about{
+    padding-top: 8rem;
+    &-bg{
+        background: url(../img/bg.png) ;
+        background-size: cover;
+    }
+    &-inner{
+        padding:125px 0 ;
+    }
+    &-txt{
+        color: #fff;
+        &-01{
+            font-size: 22px;
+        }
+        &-02{
+            margin-top: 4rem;
+        }
+    }
+}
+
+/* =============================================================================
+product
+========================================================================== */
+.product{
+    &-inner{
+        max-width: 94rem;
+    }
+    &-list{
+        flex-wrap: wrap;
+    }
+    &-item{
+        font-size: 1.4rem;
+        width: calc(33.3% - 80px * 2 / 3);
+        &:not(:nth-child(3n+1)){
+            margin-left: 8rem;
+        }
+        &:nth-child(n+4){
+            margin-top: 3rem;
+        }
+        p{
+            margin-top: 2.4rem;
+        }
+        span{
+            display: block;
+            margin-top: 1.6rem;
+            color: #989898;
+        }
+    }
+}
+
+/* =============================================================================
+news
+========================================================================== */
+.news{
+    &-bg{
+
+    }
+    &-inner{
+        max-width: 104rem;
+    }
+    &-list{
+
+    }
+    &-item{
+        justify-content: space-between;
+        padding:0 0 2.4rem;
+        border-bottom: 1px solid #E0E0E0;
+        &:not(:first-child){
+            margin: 2.2rem 0 0;
+        }
+        &-img{
+            width: 26rem;
+        }
+        &-txt{
+            width: 76rem;
+        }
+        &-date{
+            font-size: 1.4rem;
+            color: #333333;
+            margin-top: 2.5rem;
+        }
+        &-ttl{
+            font-size: 1.8rem;
+            margin-top: 1.6rem;
+        }
+        &-detail{
+            font-size: 1.4rem;
+            color: #888888;
+            margin-top: 2.4rem;
+        }
+    }
+}
+
+/* =============================================================================
+keyword
+========================================================================== */
+.keyword{
+    &-bg{
+
+    }
+    &-inner{
+
+    }
+    &-wrapper{
+        justify-content: space-between;
+    }
+    &-txt{
+        width: 52rem;
+    }
+    &-txt01{
+        font-size: 2.8rem;
+        font-weight: bold;
+    }
+    &-txt02{
+        margin-top: 4.8rem;
+    }
+    &-img{
+        width: 60rem;
+    }
+}
+
+/* =============================================================================
+contact
+========================================================================== */
+.contact{
+    &-bg{
+        background: url(../img/contact.png) ;
+        background-size: cover;
+        padding: 7.2rem 0 8.5rem;
+    }
+    &-inner{
+        max-width: 52rem;
+    }
+    &-txt{
+        text-align: center;
+
+    }
+    &-policy{
+        text-align: center;
+    }
+    form{
+        margin-top: 2.4rem;
+        dl{
+            display: flex;
+            &:not(:first-child){
+                margin-top: 3.2rem;
+            }
+        }
+        dt{
+            width: 18rem;
+            text-align: center;
+            background: #3EA1D1B3;
+            color: #fff;
+            padding: 1rem 2rem;
+        }
+        dd{
+            margin-left: 2rem;
+            width: 32rem;
+        }
+        input{
+            border: none;
+            border-radius: 2px;
+        }
+        input[type="text"]{
+            width: 100%;
+            height: 4rem;
+            box-shadow: 5px 6px 15px #60606029;
+            padding-left: 10px;
+        }
+        input[type="email"]{
+            width: 100%;
+            height: 4rem;
+            box-shadow: 5px 6px 15px #60606029;
+            padding-left: 10px;
+        }
+        input[type="radio"]{
+            margin-right: 1rem;
+        }
+    
+        textarea{
+            width: 100%;
+            height: 12.2rem;
+            border: none;
+            resize: vertical;
+            box-shadow: 5px 6px 15px #60606029;
+            padding-left: 5px;
+        }
+        input[type="checkbox"]{
+            margin-right: 1rem;
+        }
+        .privacy{
+            text-align: center;
+            margin-top: 3.2rem;
+            a{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+/* =============================================================================
+footer
+========================================================================== */
+.footer{
+    &-bg{
+        background: #F7F7F7;
+    }
+    &-inner{
+        padding-bottom: 1.7rem;
+    }
+    &-logo{
+        width: 12rem;
+        margin: 0 auto;
+        
+    }
+    &-list{
+        margin: 2.4rem 0 0;
+        justify-content: center;
+        font-size: 1.2rem;
+        &-nav{
+            &:not(:first-child){
+                margin-left: 3.2rem;
+            }
+        }
+    }
+    &-sns{
+        justify-content: center;
+        margin-top: 3.7rem;
+        &-item{
+            &:not(:first-child){
+                margin-left: 4rem;
+            }
+            a{
+                font-size: 2.2rem;
+                color: #3EA1D1B3;
+            }
+        }
+    }
+    &-right{
+        margin-top: 2.4rem;
+        text-align: center;
+        font-size: 1.2rem;
+        color: #888888;
+    }
+}
+
